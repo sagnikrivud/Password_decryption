@@ -3,6 +3,9 @@
 // Store a string into the variable which 
 // need to be Encrypted 
 $simple_string = "sagnik"; 
+// $simple_string = 'SELECT * FROM TABLE WHERE ID = ';
+// $mysql         = mysqli_query($simple_string); @sagnik
+// mysql_row      = mysql_fetch_assoc($mysql); @sagnik
 //here in $simple_string  we can call the sql query on this and fetch the password row like this mysql_row['passoword']; and decrypt.
   
 // Display the original string 
@@ -11,7 +14,7 @@ echo "Original String: " . $simple_string . "\n";
 // Store cipher method 
 $ciphering = "BF-CBC"; 
   
-// Use OpenSSl encryption method 
+// Use OpenSSl encryption method @sagnik
 $iv_length = openssl_cipher_iv_length($ciphering); 
 $options = 0; 
   
@@ -36,6 +39,7 @@ echo "Encrypted String: " . $encryption . "\n";
 $decryption_iv = random_bytes($iv_length); 
   
 // Store the decryption key 
+//Computes a digest hash value for the given data using a given method, and returns a raw or binhex encoded string. 
 $decryption_key = openssl_digest(php_uname(), 'MD5', TRUE); 
   
 // Descrypt the string 
