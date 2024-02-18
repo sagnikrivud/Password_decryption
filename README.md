@@ -1,2 +1,2 @@
 # Password_decryption
-PHP MD5 PASSWORD DECRYPTION ALGORITHM
+>PHP MD5 Password Decryption Algorithm.
