@@ -3,5 +3,7 @@
 >Usage:
 ```php
 $simple_string = "sagnik";
+```
+```php
 echo "Encrypted String: " . $encryption . "\n";
 ```
